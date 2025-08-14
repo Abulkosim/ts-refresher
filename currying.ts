@@ -11,6 +11,6 @@ function curry(fn) {
   }
 }
 
-const greet = (a, b) => `${a}, ${b}!`
-const curriedGreet = curry(greet);
-console.log(curriedGreet("WHAT UP")("Alice"))
+const mult = (a, b) => a * b;
+const curriedMult = curry(mult);
+console.log(curriedMult(2)(10));

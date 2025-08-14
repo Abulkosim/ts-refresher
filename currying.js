@@ -27,6 +27,12 @@ function curry(fn) {
         }
     };
 }
-var greet = function (a, b) { return "".concat(a, ", ").concat(b, "!"); };
-var curriedGreet = curry(greet);
-console.log(curriedGreet("WHAT UP")("Alice"));
+var mult = function (a, b) { return a * b; };
+var curriedMult = curry(mult);
+console.log(curriedMult(2)(10));
+var users = [
+    { name: "Bob", age: 17 },
+    { name: "Alice", age: 25 },
+    { name: "Charlie", age: 30 }
+];
+// const adults = users.filter(isOlderThan(18));
